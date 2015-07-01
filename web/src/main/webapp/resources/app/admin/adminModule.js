@@ -1,5 +1,5 @@
 angular.module('adminModule', ['spring-security-csrf-token-interceptor',
-    'ui.bootstrap', 'ui.router', 'ui.bootstrap.showErrors'])
+    'ui.bootstrap', 'ui.router', 'ui.bootstrap.showErrors', 'ngTable'])
     .config(['$stateProvider', '$urlRouterProvider', 'showErrorsConfigProvider',
         function ($stateProvider, $urlRouterProvider, showErrorsConfigProvider) {
             showErrorsConfigProvider.showSuccess(true);

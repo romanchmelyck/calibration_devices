@@ -1,5 +1,6 @@
 package com.softserve.edu.dto.provider;
 
+import com.softserve.edu.entity.util.ReadStatus;
 import com.softserve.edu.entity.util.Status;
 
 import java.util.Date;
@@ -9,16 +10,18 @@ public class VerificationPageDTO {
     private Date initialDate;
     private String surname;
     private String street;
-    private Status status;
-
+   private Status status;
+    private ReadStatus readStatus;
     public VerificationPageDTO() {}
 
-    public VerificationPageDTO(String id, Date initialDate, String surname, String street, Status status) {
+    public VerificationPageDTO(String id, Date initialDate, String surname, String street,
+    		Status status, ReadStatus readStatus) {
         this.id = id;
         this.initialDate = initialDate;
         this.surname = surname;
         this.street = street;
         this.status = status;
+        this.readStatus = readStatus;
     }
 
     public String getId() {
@@ -61,6 +64,14 @@ public class VerificationPageDTO {
         this.status = status;
     }
 
+    public ReadStatus getReadStatus() {
+		return readStatus;
+	}
+
+	public void setReadStatus(ReadStatus readStatus) {
+		this.readStatus = readStatus;
+	}
+	
     @Override
     public String toString() {
         return "VerificationPageDTO{" +

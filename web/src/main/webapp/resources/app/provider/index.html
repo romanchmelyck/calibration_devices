@@ -8,6 +8,7 @@
 
     <link href="/resources/assets/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/resources/assets/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/resources/assets/bower_components/esvit-ng-table-268d113/ng-table.css" rel="stylesheet">
     <link href="/resources/assets/css/provider.css" rel="stylesheet">
 </head>
 
@@ -45,16 +46,23 @@
             </li>
         </ul>
 
+							
         <!-- Sidebar -->
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
+                   
+                    
                     <li ui-sref-active="active">
                         <a ui-sref="main-panel"><i class="fa fa-home fa-fw"></i> Головна панель</a>
                     </li>
 
-                    <li ui-sref-active="active">
-                        <a ui-sref="new-verifications"><i class="fa fa-list-alt fa-fw"></i>Нові заявки</a>
+                    <li ui-sref-active="active" ng-controller ="NotificationsController">
+                        <a ui-sref="new-verifications" ng-click="reloadVerifications()" ><i class="fa fa-list-alt fa-fw"></i>Нові заявки   
+        			 		<button  class="pull-right myCircleButton " ng-if="countOfUnreadVerifications > 0"
+        			 			ng-bind="countOfUnreadVerifications" ng-cloak>
+        			 		</button>
+                      	</a>
                     </li>
 
                     <li ui-sref-active="active">
@@ -72,7 +80,7 @@
             </div>
         </div>
     </nav>
-
+							
     <div ui-view></div>
 
 </div>
