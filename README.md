@@ -1,4 +1,4 @@
-
+# calibration_devices
 # Calibration devices system 
 
 Centralized system for calibration of measurement devices. Enterprise open-source project intended to optimize process of verification calibration devices. The main goal of the project is to create centralized system of measurement devices for calibration and verification processes in Ukraine.
@@ -46,6 +46,3 @@ Check `database_script.sql` for additional information about other users such as
 ### REST API
 
 > TODO
-=======
-# calibration_devices
->>>>>>> refs/remotes/Roman_remote/master

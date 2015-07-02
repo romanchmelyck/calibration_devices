@@ -33,10 +33,7 @@ public interface VerificationRepository extends PagingAndSortingRepository<Verif
     Page<Verification> findByProviderIdAndStatusAndClientData_lastNameLikeIgnoreCase(Long providerId, Status status, String search, Pageable pageable);
     Page<Verification> findByProviderIdAndStatusAndClientDataClientAddressStreetLikeIgnoreCase(Long providerId, Status status, String search, Pageable pageable);
     
-    
-    // criteria builder
-   
-    
+
     /**
      * This method serves for security purpose. When provider employee(or admin) makes GET request
      * for any verification he can only get it if id of organization and provider employee matches.
@@ -48,6 +45,7 @@ public interface VerificationRepository extends PagingAndSortingRepository<Verif
      */
     Verification findByIdAndProviderId(String id, Long providerId);
     Verification findByIdAndCalibratorId(String id, Long providerId);
+    
     long countByProviderIdAndStatusAndReadStatus(Long providerId, Status status, ReadStatus readStatus);
     long countByCalibratorIdAndStatusAndReadStatus(Long providerId, Status status, ReadStatus readStatus);
 }
