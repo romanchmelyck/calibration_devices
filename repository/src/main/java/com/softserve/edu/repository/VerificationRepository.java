@@ -2,16 +2,12 @@ package com.softserve.edu.repository;
 
 import java.util.Date;
 
-import javax.persistence.EntityManager;
-import javax.persistence.criteria.CriteriaBuilder;
-
 import com.softserve.edu.entity.Verification;
 import com.softserve.edu.entity.util.ReadStatus;
 import com.softserve.edu.entity.util.Status;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface VerificationRepository extends PagingAndSortingRepository<Verification, String> {
