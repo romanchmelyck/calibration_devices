@@ -169,36 +169,6 @@ public class VerificationService {
     }
 
 
-//    @Transactional(readOnly = true)
-//    public Page<Verification> findPageOfSentVerificationsByProviderIdAndSearch(
-//            Long providerId, int pageNumber, int itemsPerPage, String searchType, String searchText) {
-//        Pageable pageRequest = new PageRequest(pageNumber - 1, itemsPerPage);
-//        	switch (searchType) {
-//				case "id":
-//					return verificationRepository.findByProviderIdAndStatusAndIdLikeIgnoreCase(providerId, Status.SENT, "%"+ searchText +"%", pageRequest);
-//				
-//				case "lastName":
-//					return verificationRepository.findByProviderIdAndStatusAndClientData_lastNameLikeIgnoreCase(providerId, Status.SENT, "%"+ searchText +"%", pageRequest);
-//				
-//				case "street":
-//					return verificationRepository.findByProviderIdAndStatusAndClientDataClientAddressStreetLikeIgnoreCase(providerId, Status.SENT, "%"+ searchText +"%", pageRequest);
-//				
-//				case "date":
-//					
-//					SimpleDateFormat form = new SimpleDateFormat("dd-MM-yyyy");
-//					Date date = null;
-//						try {
-//							date = form.parse(searchText);
-//						} catch (ParseException e) {
-//							e.printStackTrace();
-//						}
-//					return verificationRepository.findByProviderIdAndStatusAndInitialDate(providerId, Status.SENT, date, pageRequest);
-//				
-//				default:
-//					 return verificationRepository.findByProviderIdAndStatusOrderByInitialDateDesc(providerId, Status.SENT, pageRequest);
-//			}
-//        
-//    }
     
     
     @Transactional(readOnly = true)
